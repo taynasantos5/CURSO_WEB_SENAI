@@ -14,3 +14,9 @@ imprimir('AULA JS')
 
 var impri = a => console.log(a)
 impri (objeto = {marca: 'sansung'})
+
+//operador ternario
+
+const resultado = nota => nota>=7 ? 'Aprovado' : 'Reprovado'
+
+console.log(resultado(6))
