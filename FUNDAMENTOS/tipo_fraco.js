@@ -10,3 +10,7 @@ console.log(typeof teste)
 teste = true
 
 console.log(typeof teste)
+
+console.log(nexiste)
+
+let nexiste = "agora existe"
