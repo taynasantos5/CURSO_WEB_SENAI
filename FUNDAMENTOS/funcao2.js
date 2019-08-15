@@ -12,5 +12,5 @@ console.log(soma(5,1))
 const imprimir = teste => console.log(teste)
 imprimir('AULA JS')
 
-var imprimir = a => console.log(a)
-imprimir(objeto={marca: 'sansung'})
+var impri = a => console.log(a)
+impri (objeto = {marca: 'sansung'})
