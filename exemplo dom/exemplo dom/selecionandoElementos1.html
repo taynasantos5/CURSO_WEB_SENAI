@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+
+    <div id="primeiro" onclick="alterna1()">#primeiro</div>
+
+    <div id="segundo" onclick="alterna2()">Segundo</div>
+    
+    <div id="terceiro" onclick="alterna3()" class="terceiro ultimo">.terceiro .ultimo</div>
+ 
+    <button id="botao1" onclick="exemplo()">Destacar</button>
+    
+    <script>     
+    /*         
+    const pri = document.getElementById('segundo')
+    //document.getElementById recupera o elemento "primeiro"
+        pri.classList.add('destaque')
+        //classList.add adiciona uma lista de classe para o elemento
+        document.getElementById('primeiro').classList.add('destaque')
+        
+        pri.innerHTML = "mudança"
+        pri.innerText = "outra mudança"
+
+        */
+
+        //utilizando for pra percorer um array
+      // const divs = document.getElementsByTagName('div')
+      // const lista = Array.from(document.getElementsByTagName('div')) //Array.from convertendo elemento para array
+       //const lista_dois = [...(document.getElementsByTagName('div')] //[...]convertendo elemento para array
+
+      // for(let i = 0; i<divs.length; i++){
+       //     divs[i].classList.add('destaque')
+      // }
+
+       //lista.forEach(e => e.classList.add('destaque'))//forEach funcionapa para array, percore o elemento fazendo algo removendo ou adicionando
+       //lista[2].classList.remove('destaque')
+       //lista_dois.forEach(e => e.classList.add('destaque'))
+       //lista_dois.forEach(e => e.classList.remove('destaque'))
+
+       
+        function exemplo(){
+            const lista_dois = [...document.getElementsByTagName('div')]  //[...]convertendo elemento para array
+            const bt=document.getElementById('botao1') 
+            if(bt.innerText == "Destacar"){
+                lista_dois.forEach(e => e.classList.add('destaque'))
+                bt.innerText ="Remover Destaque"
+            }else{
+                lista_dois.forEach(e => e.classList.remove('destaque'))
+                bt.innerText ="Destacar"
+            }
+        }
+    
+
+    const alterna1 = () => document.getElementById('primeiro').classList.toggle('destaque')
+    const alterna2 = () => document.getElementById('segundo').classList.toggle('destaque')
+    const alterna3 = () => document.getElementById('terceiro').classList.toggle('destaque')   
+      
+    </script>
+
+</body>
+</html>
